@@ -1,0 +1,7 @@
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+*.pyc
+backend/roso_dev.db
+.env
+.DS_Store

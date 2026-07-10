@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROSO — Connexion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/app.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="eyebrow">R.O.S.O — Accès en ligne</div>
+    <h1 class="auth-title">Connexion</h1>
+    <p class="auth-sub">Compte individuel requis. Chaque utilisateur gère ses propres clés API tierces.</p>
+
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Se connecter</button>
+      <button class="auth-tab" data-tab="register">Créer un compte</button>
+    </div>
+
+    <form id="loginForm" class="auth-form">
+      <label>Email</label>
+      <input type="email" name="email" required autocomplete="email">
+      <label>Mot de passe</label>
+      <input type="password" name="password" required autocomplete="current-password">
+      <button type="submit" class="btn-primary">Se connecter</button>
+    </form>
+
+    <form id="registerForm" class="auth-form" style="display:none">
+      <label>Email</label>
+      <input type="email" name="email" required autocomplete="email">
+      <label>Mot de passe (8 caractères min.)</label>
+      <input type="password" name="password" required minlength="8" autocomplete="new-password">
+      <button type="submit" class="btn-primary">Créer le compte</button>
+    </form>
+
+    <div id="authError" class="auth-error" style="display:none"></div>
+  </div>
+</div>
+<script src="js/auth.js"></script>
+</body>
+</html>

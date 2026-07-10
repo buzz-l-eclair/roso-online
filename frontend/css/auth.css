@@ -1,0 +1,45 @@
+.auth-wrap{
+  min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+}
+.auth-card{
+  width:100%; max-width:420px; padding:32px; border-radius:16px;
+  background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+}
+.auth-title{ font-family:'Space Grotesk',sans-serif; font-size:28px; margin:8px 0 4px; }
+.auth-sub{ opacity:0.7; font-size:14px; margin-bottom:20px; line-height:1.4; }
+.auth-tabs{ display:flex; gap:8px; margin-bottom:20px; }
+.auth-tab{
+  flex:1; padding:10px; border-radius:8px; border:1px solid rgba(255,255,255,0.1);
+  background:transparent; color:inherit; cursor:pointer; font-size:14px;
+}
+.auth-tab.active{ background:rgba(255,255,255,0.1); font-weight:600; }
+.auth-form{ display:flex; flex-direction:column; gap:6px; }
+.auth-form label{ font-size:13px; opacity:0.8; margin-top:8px; }
+.auth-form input{
+  padding:10px 12px; border-radius:8px; border:1px solid rgba(255,255,255,0.15);
+  background:rgba(0,0,0,0.2); color:inherit; font-size:14px;
+}
+.auth-form button{ margin-top:16px; }
+.auth-error{
+  margin-top:16px; padding:10px 12px; border-radius:8px;
+  background:rgba(220,50,50,0.15); border:1px solid rgba(220,50,50,0.4); font-size:13px;
+}
+
+/* Modal "Mes clés API" (réutilise la modal générique existante) */
+.apikeys-row{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:10px 0; border-bottom:1px solid rgba(255,255,255,0.08); gap:12px;
+}
+.apikeys-row input{
+  flex:1; padding:8px 10px; border-radius:6px; border:1px solid rgba(255,255,255,0.15);
+  background:rgba(0,0,0,0.2); color:inherit; font-size:13px;
+}
+.apikeys-status{ font-size:12px; opacity:0.7; min-width:90px; text-align:right; }
+.topbar{
+  display:flex; justify-content:flex-end; gap:12px; padding:12px 24px;
+}
+.topbar button{
+  background:transparent; border:1px solid rgba(255,255,255,0.15); color:inherit;
+  padding:8px 14px; border-radius:8px; cursor:pointer; font-size:13px;
+}

@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: roso-online
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter          # le plan gratuit a un filesystem éphémère et s'endort après inactivité
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: roso-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: SERVER_SECRET_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: "*"          # à restreindre à ton domaine Render une fois connu
+
+databases:
+  - name: roso-db
+    plan: starter
+    databaseName: roso
+    user: roso
